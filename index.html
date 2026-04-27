@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Nimesh Khadka Portfolio</title>
+
+<meta name="description" content="Portfolio of Nimesh Khadka, Backend Developer and DevOps Learner.">
+
+<link rel="icon" href="https://cdn-icons-png.flaticon.com/512/1055/1055687.png">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+
+/* ===== GLOBAL ===== */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: #0f172a;
+    color: #e2e8f0;
+    scroll-behavior: smooth;
+}
+
+html {
+    scroll-snap-type: y mandatory;
+}
+
+/* ===== SIDEBAR ===== */
+.sidebar {
+    position: fixed;
+    width: 220px;
+    height: 100vh;
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(12px);
+    border-right: 1px solid rgba(255,255,255,0.15);
+}
+
+.sidebar a {
+    display: block;
+    padding: 16px;
+    color: #e2e8f0;
+    text-decoration: none;
+    transition: 0.3s;
+    border-left: 3px solid transparent;
+}
+
+.sidebar a:hover,
+.sidebar a.active {
+    border-left: 3px solid #38bdf8;
+    background: rgba(255,255,255,0.1);
+    color: #38bdf8;
+}
+
+/* SOCIAL */
+.social-links {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+}
+
+.social-links a {
+    color: #cbd5f5;
+    margin: 5px;
+    font-size: 1.2em;
+}
+
+.social-links a:hover {
+    color: #38bdf8;
+}
+
+/* ===== MAIN ===== */
+main {
+    margin-left: 220px;
+}
+
+/* ===== SECTIONS ===== */
+section {
+    min-height: 100vh;
+    padding: 60px;
+    scroll-snap-align: start;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ===== GLASS ===== */
+.glass {
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(14px);
+    border-radius: 15px;
+    padding: 40px;
+    border: 1px solid rgba(255,255,255,0.2);
+    max-width: 800px;
+    width: 100%;
+    text-align: center;
+    animation: fadeIn 0.8s ease;
+}
+
+/* ===== ANIMATION ===== */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(25px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* ===== TEXT ===== */
+h1 {
+    font-size: 2.8em;
+    color: #38bdf8;
+}
+
+h2 {
+    color: #38bdf8;
+}
+
+ul {
+    text-align: left;
+}
+
+/* ===== PROJECT ===== */
+.project-card {
+    margin: 12px 0;
+    padding: 18px;
+    border-radius: 10px;
+    background: rgba(255,255,255,0.06);
+    transition: 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-6px) scale(1.02);
+    background: rgba(255,255,255,0.12);
+}
+
+.project-card a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* ===== SCROLL BUTTON ===== */
+.scroll-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #38bdf8;
+    color: #0f172a;
+    border: none;
+    border-radius: 50%;
+    padding: 10px 14px;
+    cursor: pointer;
+    display: none;
+}
+
+.scroll-top.show {
+    display: block;
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 768px) {
+
+    html {
+        scroll-snap-type: none;
+    }
+
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    main {
+        margin-left: 0;
+    }
+
+    section {
+        padding: 30px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<header class="sidebar">
+    <nav>
+        <a href="#home" class="nav-link active">Home</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#skills" class="nav-link">What I Bring</a>
+        <a href="#projects" class="nav-link">Projects</a>
+    </nav>
+
+    <div class="social-links">
+        <a href="https://github.com/nimesh254" target="_blank" aria-label="GitHub">
+            <i class="fab fa-github"></i>
+        </a>
+    </div>
+</header>
+
+<main>
+
+<!-- HOME -->
+<section id="home">
+    <div class="glass">
+        <h1>Nimesh Khadka</h1>
+        <h3>Backend Developer | DevOps Learner</h3>
+        <p>I build backend systems and explore DevOps tools like Docker and CI/CD.</p>
+    </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+    <div class="glass">
+        <h2>About</h2>
+        <p>Project-driven developer focused on real-world systems.</p>
+    </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+    <div class="glass">
+        <h2>What I Bring</h2>
+
+        <p style="margin-bottom:20px;">
+            I focus on building reliable backend systems and continuously improving my DevOps workflow.
+            I aim to deliver clean, scalable, and practical solutions.
+        </p>
+
+        <ul>
+            <li>
+                <strong>Backend Development:</strong> 
+                Building CRUD systems, authentication, and API-driven applications using Python, PHP, and Java.
+            </li>
+
+            <li>
+                <strong>Database Management:</strong> 
+                Designing and managing structured data using MySQL and PostgreSQL with efficient queries.
+            </li>
+
+            <li>
+                <strong>DevOps & Workflow:</strong> 
+                Version control with Git, basic CI/CD pipelines, and containerization using Docker (learning stage).
+            </li>
+
+            <li>
+                <strong>Problem Solving:</strong> 
+                Hands-on debugging, fixing real-world issues, and improving system performance through practice.
+            </li>
+        </ul>
+
+        <p style="margin-top:20px; color:#38bdf8;">
+            Actively working toward becoming a Backend + DevOps engineer ready for real-world projects.
+        </p>
+    </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+    <div class="glass">
+        <h2>Projects</h2>
+
+        <article class="project-card">
+            <a href="https://github.com/nimesh254/Alco_Watch" target="_blank">
+                <h3>Alco_Watch ↗</h3>
+                <p>Alcohol detection embedded system.</p>
+            </a>
+        </article>
+
+        <article class="project-card">
+            <a href="https://github.com/nimesh254/Food_House" target="_blank">
+                <h3>Food House ↗</h3>
+                <p>Backend system for product & sales management.</p>
+            </a>
+        </article>
+
+        <article class="project-card">
+            <a href="https://github.com/nimesh254/Water_Level_Monitoring_System" target="_blank">
+                <h3>Water Monitoring ↗</h3>
+                <p>IoT-based water level tracking system.</p>
+            </a>
+        </article>
+
+        <article class="project-card">
+            <a href="https://github.com/nimesh254/Detectify" target="_blank">
+                <h3>Detectify ↗</h3>
+                <p>Security detection system.</p>
+            </a>
+        </article>
+
+        <article class="project-card">
+            <a href="https://github.com/nimesh254/Bagchal-Game" target="_blank">
+                <h3>Bagchal Game ↗</h3>
+                <p>Two-player strategy board game.</p>
+            </a>
+        </article>
+
+    </div>
+</section>
+
+</main>
+
+<footer style="text-align:center; padding:10px; font-size:14px;">
+    © 2026 Nimesh Khadka
+</footer>
+
+<button class="scroll-top" id="scrollTop">↑</button>
+
+<script defer>
+
+// ACTIVE NAV
+const sections = document.querySelectorAll("section");
+const navLinks = document.querySelectorAll(".nav-link");
+
+window.addEventListener("scroll", () => {
+    let current = "";
+
+    sections.forEach(section => {
+        if (pageYOffset >= section.offsetTop - 200) {
+            current = section.id;
+        }
+    });
+
+    navLinks.forEach(link => {
+        link.classList.remove("active");
+        if (link.getAttribute("href") === "#" + current) {
+            link.classList.add("active");
+        }
+    });
+
+    // scroll top button
+    document.getElementById("scrollTop").classList.toggle("show", window.scrollY > 400);
+});
+
+// SCROLL TOP
+document.getElementById("scrollTop").onclick = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+};
+
+</script>
+
+</body>
+</html>
